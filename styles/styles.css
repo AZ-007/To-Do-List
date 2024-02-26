@@ -1,4 +1,137 @@
-.todo{
+.todo {
+  /* Css for li and ul */
 
-background-color: gold;
+  background: url(../pages/Images/paper.png);
+
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+}
+p {
+  font-size: 20px;
+
+  font-weight: bold;
+}
+.todo:before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+
+  background-image: url(../pages/Images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  height: 40px;
+  width: 40px;
+  background-image: url(../pages/Images/check.png);
+}
+
+.todo span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  color: #070707;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 40%;
+}
+.todo span:hover {
+  background: #e70101;
+}
+
+#add-todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background: #edeef0; */
+  border-radius: 40px;
+  margin-bottom: 25px;
+}
+.todo-input {
+  flex: 1;
+  text-align: center;
+  border: line;
+  outline: none;
+  background: #cbced3;
+  border-radius: 10px;
+  width: 80%;
+  padding: 10px;
+}
+.todo-input-dec {
+  flex: 1;
+  text-align: center;
+  border: line;
+  outline: none;
+  background: #cbced3;
+  border-radius: 10px;
+  width: 80%;
+  padding: 10px;
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  cursor: pointer;
+  color: #1a1010;
+  background: #35d77e;
+  font-style: italic;
+
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+.container {
+  background: url(../pages/Images/space.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+/* .container img {
+  /* height: 100%;
+    width: 100%; */
+/* object-fit: contain;
+ } */
+
+.TodoContainer {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  background-image: url(../pages/Images/paper.png);
+}
+.TodoContainer h2 {
+  color: #0a0d13;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.TodoContainer h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.TodoContainer h1 img {
+  display: flex;
+  width: 80px;
+  margin-left: 240px;
 }

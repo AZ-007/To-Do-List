@@ -12,11 +12,11 @@ In this level, the application includes the following features:
 
 2. Rendering Todo List:
    - [x] Render the list of todos on the screen.
-   - Each todo item should display a checkbox and the task description.
+   - [x] Each todo item should display a checkbox and the task description.
 
 3. Deleting a Todo:
-   - Implement a "Delete" button next to each todo item.
-   - When the button is clicked, remove the corresponding todo item from the list.
+   - [x] Implement a "Delete" button next to each todo item.
+   - [x] When the button is clicked, remove the corresponding todo item from the list.
 
 ## Level 2: Todo App Additional Requirements
 

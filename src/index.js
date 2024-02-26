@@ -1,31 +1,93 @@
+let todos = [
+  {
+    title: "Walk the dog",
+    description: "ten meints walk the dog",
+  },
+  {
+    title: "go to gym",
+    description: "45 min train",
+  },
+];
 
-const todos = ["Abdualziz", "Mohmmad", "Ahmad"]
+const todolist = document.getElementsByClassName("todo");
+const container = document.querySelector(".TodoContainer");
+const ul = document.createElement("ul");
+ul.classList.add("list-container");
+container.appendChild(ul);
+renderTodos();
 
-const container = document.querySelector(".container")
-const ul = document.createElement("ul")
+function renderTodos() {
+  todos.forEach((task) => {
+    const li = document.createElement("li");
+    const title = document.createElement("p");
+    const description = document.createElement("p");
+    console.log("task: ", task);
 
-container.appendChild(ul)
+    li.classList.add("todo");
+    // li.textContent = task.title;
+    title.textContent = task.title;
+    description.textContent = task.description;
 
-todos.forEach((element) => {
-const li = document.createElement("li")
-  li.classList.add("todo") //Create a class name for li element
-  li.textContent = element; // Inserting name from the array to "li" element
+    li.appendChild(description);
+    li.appendChild(title);
+    ul.appendChild(li);
+
+    let deleteBtn = document.createElement("span"); //Create new span element
+    deleteBtn.textContent = "\u00d7";
+    li.appendChild(deleteBtn);
+  });
+}
+
+function addTodo(value, desvalue) {
+  //Create a li element and CSS class for todo
+  let li = document.createElement("li");
+
+  const title = document.createElement("p");
+  const description = document.createElement("p");
+
+  li.classList.add("todo");
+
+  // li.textContent = value;
+  title.textContent = value;
+  description.textContent = desvalue;
+  li.appendChild(description);
+  li.appendChild(title);
   ul.appendChild(li);
-});
+  todos.push(value); // push new task to array
 
+  let deleteBtn = document.createElement("span"); //Create new span element
+  deleteBtn.textContent = "\u00d7";
+  li.appendChild(deleteBtn);
+}
 
 const form = document.getElementById("add-todo");
-form.addEventListener("submit", (event) => {
-  console.log("clicking...")
-    event.preventDefault();
-    const newTodo = document.querySelector(".todo-input").value;
-    console.log ("there is ", newTodo )
 
-    const li = document.createElement("li")
-    li.classList.add("todo");
-    li.textContent = newTodo
-    ul.appendChild(li)
-    todos.push(newTodo)
-})
-  
-  
+form.addEventListener("submit", (e) => {
+  const newTodo = document.querySelector(".todo-input");
+  const newdec = document.querySelector(".todo-input-dec");
+
+  e.preventDefault();
+
+  if (newTodo.value === "") {
+    alert("YOU MUST WRITE SOMETHING");
+  } else if (newdec.value === "") {
+    alert("YOU MUST WRITE a Description");
+  } else {
+    addTodo(newTodo.value, newdec.value);
+    console.log("New list", todos);
+  }
+  newTodo.value = "";
+  newdec.value = "";
+});
+
+ul.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+    } else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+    }
+  },
+  false
+);
