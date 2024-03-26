@@ -2,6 +2,7 @@
 
 This project aims to build a to do list application by applying HTML, CSS and Javascript.  The application allows users to manage their tasks effectively.
 
+Try it now -> https://comfy-mandazi-38bfec.netlify.app
 ## Level 1: Todo App Basic Requirements
 
 In this level, the application includes the following features:
