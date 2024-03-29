@@ -1,8 +1,9 @@
 # Todo App
 
 This project aims to build a to do list application by applying HTML, CSS and Javascript.  The application allows users to manage their tasks effectively.
+This project has been completed as part of Integrify FullStack program.
 
-Try it now -> https://comfy-mandazi-38bfec.netlify.app
+Latest version is deployed at -> https://comfy-mandazi-38bfec.netlify.app
 ## Level 1: Todo App Basic Requirements
 
 In this level, the application includes the following features:
@@ -48,6 +49,3 @@ If you have a higher skill level and finish the previous requirements before the
 
 `Please note that the bonus requirements and reviews are optional and can be completed if you have additional time and advanced skills.`
 
-### Deadline : 27-02-2024 
-
-Happy coding!
